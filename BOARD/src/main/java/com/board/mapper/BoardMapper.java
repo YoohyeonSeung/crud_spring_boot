@@ -7,9 +7,22 @@ import org.apache.ibatis.annotations.Param;
 import com.board.domain.BoardVO;
 
 public interface BoardMapper {
-	
+	// 글 작성
 	public void boardInsert(BoardVO board) throws Exception;	
 	
-	 public List<BoardVO>boardList()throws Exception;
+	// 글 목록
+	public List<BoardVO>boardList()throws Exception;
 
+	// 글 보기
+	public BoardVO boardView(int bno) throws Exception;
+	
+	// 조회수 증가
+	public void hitPlus(int bno) throws Exception;
+	
+	// 글 수정
+	public void boardUpdate(BoardVO boardVO) throws Exception;
+	
+	// 글 삭제
+	public void boardDelete(int bno) throws Exception;
+	
 }

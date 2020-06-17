@@ -59,4 +59,18 @@ public class BoardController {
         
         return new RedirectView("/board");          
     }
+    
+    //게시글 상세 보기
+    @RequestMapping(value = "/{bno}", method = RequestMethod.GET)
+    public ModelAndView view(@PathVariable("bno") int bno) throws Exception{
+    	
+    	BoardVO board = boardMapper.boardView(bno);
+    	boardMapper.hitPlus(bno);
+    	
+    	return new ModelAndView("boardView", "board", board);
+    }
+    
+    
+    
+    
 }

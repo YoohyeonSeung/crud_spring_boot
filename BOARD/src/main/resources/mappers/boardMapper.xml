@@ -13,8 +13,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  	
  	<select id = "boardList" resultType = "com.board.domain.BoardVO">
  		select * from board_pro
- 		
  	</select>
  	
+    <select id="boardView" parameterType="int" resultType="com.board.domain.BoardVO">
+        select * from board_pro where bno = #{bno}
+    </select>
+    
+    <update id="hitPlus" parameterType="int">
+        update board_pro set hit = hit+1 where bno = #{bno}
+    </update>
+    
+    <update id="boardUpdate" parameterType="com.board.domain.BoardVO">
+        update board_pro set subject = #{subject}, content = #{content} where bno = #{bno}
+    </update>
+    
+    <delete id="boardDelete" parameterType="int">
+        delete from board_pro where bno = #{bno}
+    </delete>
  	
 </mapper>
