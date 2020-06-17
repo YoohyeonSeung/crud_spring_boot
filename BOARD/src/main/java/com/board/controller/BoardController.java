@@ -70,6 +70,32 @@ public class BoardController {
     	return new ModelAndView("boardView", "board", board);
     }
     
+    // 게시글 수정 페이지(GET)
+    @RequestMapping(value = "/post/{bno}", method = RequestMethod.GET)
+    public ModelAndView updateForm(@PathVariable("bno") int bno) throws Exception{
+    	
+    	BoardVO board = boardMapper.boardView(bno);    	
+    	
+    	return new ModelAndView("boardUpdate", "board", board);
+    }
+    
+    // 게시글 수정(PATCH)
+    @RequestMapping(value = "/post/{bno}", method = RequestMethod.PATCH)
+    public RedirectView update(@ModelAttribute("BoardVO") BoardVO boardVO, @PathVariable("bno") int bno) throws Exception{
+    	
+    	boardMapper.boardUpdate(boardVO);
+    	
+    	return new RedirectView("/board/"+bno);
+    }
+    
+    // 게시글 삭제(DELETE)
+    @RequestMapping(value = "/post/{bno}", method = RequestMethod.DELETE)
+    public RedirectView delete(@PathVariable("bno") int bno) throws Exception{
+    	boardMapper.boardDelete(bno);
+    	
+    	return new RedirectView("/board");
+    }
+    
     
     
     

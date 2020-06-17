@@ -4,9 +4,6 @@ import java.util.Date;
 
 import lombok.Data;
 
-
-
-
 @Data
 public class BoardVO {
 	
@@ -17,10 +14,5 @@ public class BoardVO {
     private Date reg_date;
     private int hit;
 
-    
-    
-    
-    
-    
     
 }
