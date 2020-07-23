@@ -23,6 +23,11 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	
+	//swagger 라이브러리
+	implementation 'io.springfox:springfox-swagger2:2.6.1'
+	implementation 'io.springfox:springfox-swagger-ui:2.6.1'
+	
+	
 	compile fileTree(dir: 'libs', include: ['*.jar'])
 	compile 'org.springframework.boot:spring-boot-starter-jdbc:1.2.6.RELEASE'
     compile 'org.mybatis:mybatis-spring:1.2.2'
