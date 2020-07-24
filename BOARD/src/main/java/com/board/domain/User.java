@@ -28,5 +28,12 @@ public class User {
 	@Column(nullable = false, length = 100)
 	private String name;
 	
+	@Column(nullable = false, unique = true, length = 20)
+	private String nickname;
 	
+	@Column(nullable = false, length = 11)
+	private int phoneNum;
+	
+	@Column(nullable = false, length = 30)
+	private String email;	
 }

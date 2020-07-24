@@ -12,7 +12,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.board.domain.BoardVO;
+import com.board.domain.UserVO;
 import com.board.mapper.BoardMapper;
+import com.board.mapper.UserMapper;
 
 
 
@@ -28,6 +30,9 @@ public class BoardApplicationTests {
 	
 	@Autowired
 	private BoardMapper mapper;
+	
+	@Autowired
+	private UserMapper userMapper;
 	
 
 //	@Test
@@ -49,17 +54,17 @@ public class BoardApplicationTests {
 //	}
 	
 	
-	@Autowired
-	private SqlSessionFactory sqlSession;
-	
-	@Test
-	public void contextLoads() {
-	}
-	
-	@Test
-	public void testSqlSession() throws Exception{
-		System.out.println("sqlSession : "+ sqlSession);
-	}
+//	@Autowired
+//	private SqlSessionFactory sqlSession;
+//	
+//	@Test
+//	public void contextLoads() {
+//	}
+//	
+//	@Test
+//	public void testSqlSession() throws Exception{
+//		System.out.println("sqlSession : "+ sqlSession);
+//	}
 	
 	
 //	@Test
@@ -68,14 +73,28 @@ public class BoardApplicationTests {
 //		BoardVO vo = new BoardVO();
 //		
 //
-//		vo.setSubject("Á¦¸ñÀÔ´Ï´Ù.");
-//		vo.setContent("³»¿ëÀÔ´Ï´Ù.");
-//		vo.setWriter("ÀÛ¼ºÀÚÀÔ´Ï´Ù.");
+//		vo.setSubject("ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+//		vo.setContent("ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+//		vo.setWriter("ï¿½Û¼ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
 //
 //		mapper.boardInsert(vo);
 //		
 //	}
 	
+	@Test
+	public void testUserMapper() throws Exception{
+		
+		UserVO vo = new UserVO();
+		
+		vo.setName("st");
+		vo.setNickName("kosoto");
+		vo.setPhoneNum("01077778888");
+		vo.setEmail("kosoto@gmail.com");
+		vo.setPassword("í—¤í—¤í—¤í—¤í—¤í—¿");
+		vo.setUserId("kosoto");
+		
+		userMapper.userInsert(vo);
+	}
 	
 	
 	

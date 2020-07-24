@@ -52,9 +52,9 @@ public class BoardController {
         /*
          * Redirect를 하는 기존 방법은 Class의 annotation을 @controller를 선언하고 함수의 반환 type을 String으로 하여 return "localhost:8080/board" 로 해야 됬었다.
          * 
-         * 하지만 반환 타입을 RedirectView 로 하여 return RedirectView("som_url") 으로 하면 Class의 annotation을 @RestController로 할 수 있다.
+         * 하지만 반환 타입을 RedirectView 로 하여 return RedirectView("some_url") 으로 하면 Class의 annotation을 @RestController로 할 수 있다.
          * 
-         * 이때 som_url은 localhost:8080/board로 url전체로 할 필요 없이 가고자 하는 페이지로 하면된다. 
+         * 이때 some_url은 localhost:8080/board로 url전체로 할 필요 없이 가고자 하는 페이지로 하면된다. 
          */
         
         return new RedirectView("/board");          

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+ 
+<mapper namespace="com.board.mapper.UserMapper">
+ 	
+ 	<!-- 회원 추가 -->
+	<insert id="userInsert" parameterType = "com.board.domain.UserVO">
+		INSERT INTO USER_LIST
+			VALUES
+		(bno_seq.NEXTVAL, #{userId}, #{name}, #{nickName},#{phoneNum},#{email},#{password})
+	</insert>
+	
+	<!-- 전체 회원 목록 -->
+	<select id = "userList" resultType = "com.board.domain.UserVO">
+		SELECT * FROM USER_LIST
+	</select>
+	
+	<!-- 회원 정보 상세보기 -->
+	<select id = "userView" parameterType = "int"  resultType = "com.board.domain.UserVO">
+		SELECT * FROM USER_LIST WHERE bno = #{bno}
+	</select>
+	
+	<!--> 회원 정보 수정 <-->
+	<update id = "userUpdate" parameterType = "com.board.domain.UserVO">
+		UPDATE USER_LIST SET NICKNAME = #{nickName}, NAME = #{name}, PHONENUM = #{phoneNum}, EMAIL = #{email}, PASSWORD = #{password}
+	</update>
+	
+	
+	<!--> 회원 삭제 <-->
+	<delete id = "userDelete" parameterType="int">
+		DELETE FROM USER_LIST WHERE bno = #{bno}
+	</delete>
+	
+</mapper>
