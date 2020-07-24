@@ -9,7 +9,7 @@ CRUD Project 개요
     1) 게시판 CRUD 기능
     2) 회원 기능 - Under Construction
 
-## 3. 참조 사이트
+## 3. Reference
 * 게시판 CRUD 기능 참조 : <https://bedmil.tistory.com/31> 
 * 회원 기능 참조 : <https://daddyprogrammer.org/post/series/springboot2-make-rest-api/>
 
