@@ -1,17 +1,17 @@
 CRUD Project 개요
 ================
 # 1. 기술 스택
-    * Java Spring Boot - Rest API   
-    * Gadle
-    * Oracle DB - 11c
+    1) Java Spring Boot - Rest API   
+    2) Gadle
+    3) Oracle DB - 11c
 
 # 2. 기능
-    * 게시판 CRUD 기능
-    * 회원 기능 - Under Construction
+    1) 게시판 CRUD 기능
+    2) 회원 기능 - Under Construction
 
 # 3. 참조 사이트
-    * 게시판 CRUD 기능 참조 : <https://bedmil.tistory.com/31> 
-    * 회원 기능 참조 : <https://daddyprogrammer.org/post/series/springboot2-make-rest-api/>
+    1) 게시판 CRUD 기능 참조 : <https://bedmil.tistory.com/31> 
+    2) 회원 기능 참조 : <https://daddyprogrammer.org/post/series/springboot2-make-rest-api/>
 
 # P.S
 ----------------------
