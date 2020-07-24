@@ -10,8 +10,8 @@ CRUD Project 개요
     2) 회원 기능 - Under Construction
 
 # 3. 참조 사이트
-    1) 게시판 CRUD 기능 참조 : <https://bedmil.tistory.com/31> 
-    2) 회원 기능 참조 : <https://daddyprogrammer.org/post/series/springboot2-make-rest-api/>
+* 게시판 CRUD 기능 참조 : <https://bedmil.tistory.com/31> 
+* 회원 기능 참조 : <https://daddyprogrammer.org/post/series/springboot2-make-rest-api/>
 
 # P.S
 * Spring Boot를 이용하여 게시판 CRUD 를 구현할 때 H2를 이용하거나 MySql을 많이 이용하나 이 프로젝트에서는 Oracle DB를 이용하였다.
