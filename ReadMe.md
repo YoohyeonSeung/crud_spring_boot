@@ -10,7 +10,7 @@ CRUD Project 개요
     2) 회원 기능 - Under Construction
 
 ## 3. Reference
-* 게시판 CRUD 기능 참조 : <https://bedmil.tistory.com/31> 
+* 게시판 CRUD 기능 참조 : <https://private.tistory.com/35> 
 * 회원 기능 참조 : <https://daddyprogrammer.org/post/series/springboot2-make-rest-api/>
 
 ## P.S
