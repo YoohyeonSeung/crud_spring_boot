@@ -119,3 +119,4 @@ Spring Boot 내용 정리
   </tr>
 </tbody>
 </table>
+* Gradle이 아닌 Maven 프로젝트일 경우 build.gradle 대신 pom.xml로 의존성을 관리 한다. 
