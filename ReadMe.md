@@ -13,9 +13,9 @@ CRUD Project 개요
 * Oracle DB 11c 연동을 위한 ojdbc6.jar 처리
     1) lib 폴더 생성 후 ojdbc6.jar 저장. 
     2) build.gradle에 다음 코드 삽입하여 의존성 관리
->	```
->	compile fileTree(dir: 'libs', include: ['*.jar'])
->	```
+    >	```
+    >	compile fileTree(dir: 'libs', include: ['*.jar'])
+    >	```
 
        
     
