@@ -9,7 +9,14 @@ CRUD Project 개요
     1) 게시판 CRUD 기능
     2) 회원 기능 - Under Construction
 
-## 3. Reference
+## 3. 특이사항
+* Oracle DB 11c 연동을 위한 ojdbc6.jar 처리
+> lib 폴더 생성 후 ojdbc6.jar 저장. build.gradle에 다음 코드 삽입하여 의존성 관리
+"""
+    	compile fileTree(dir: 'libs', include: ['*.jar'])
+"""
+
+## 4. Reference
 * 게시판 CRUD 기능 참조 : <https://private.tistory.com/35> 
 * 회원 기능 참조 : <https://daddyprogrammer.org/post/series/springboot2-make-rest-api/>
 
