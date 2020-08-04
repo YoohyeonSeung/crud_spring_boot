@@ -1,6 +1,6 @@
 CRUD Project 개요
 ================
-## 1. 기술 스택
+## 1. 개발 환경
     1) Java Spring Boot - Rest API   
     2) Gadle
     3) Oracle DB - 11c
