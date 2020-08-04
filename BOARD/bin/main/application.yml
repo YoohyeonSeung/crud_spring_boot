@@ -1,0 +1,11 @@
+# DataBase
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url : jdbc:oracle:thin:@localhost:1521/orcl
+    username: hs
+    password: yoo
+  # jsp로 페이지 구성  mvc:    view:      prefix: /WEB-INF/views/
+      suffix: .jsp
+  #다음의 코드는 .jsp 파일의 위치가 /src/main/webapp/WEB-INF/views/ 폴더 아래로 지정하고, 컨트롤러에서 반환되는 값에 .jsp 확장자를 붙여 만들어진 파일명으로 뷰로 사용되어지는 jsp파일을 찾도록 한다.   thymeleaf:    cache: false
+    view-names: thymeleaf/*
