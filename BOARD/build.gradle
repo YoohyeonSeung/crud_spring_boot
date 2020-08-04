@@ -33,6 +33,10 @@ dependencies {
     compile 'org.mybatis:mybatis:3.2.8'
     compile 'commons-dbcp:commons-dbcp:1.4'
     
+    compile group: 'javax.xml', name: 'jaxb-api', version: '2.1'
+    
+    
+    
     compile group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.1.1'    
     
     compile('org.apache.tomcat.embed:tomcat-embed-jasper')

@@ -18,6 +18,7 @@ import org.springframework.web.servlet.view.RedirectView;
 
 import com.board.domain.BoardVO;
 import com.board.mapper.BoardMapper;
+import com.board.service.XmlService;
  
 @RestController
 @RequestMapping("/board")
@@ -25,6 +26,9 @@ public class BoardController {
  
     @Autowired
     private BoardMapper boardMapper;
+    
+    @Autowired
+    private XmlService xmlService;
     
     
     //게시글 목록
@@ -48,6 +52,8 @@ public class BoardController {
     public RedirectView write(@ModelAttribute("BoardVO") BoardVO board) throws Exception{
  
         boardMapper.boardInsert(board);
+        
+        xmlService.createXmlBoard(board);
         
         /*
          * Redirect를 하는 기존 방법은 Class의 annotation을 @controller를 선언하고 함수의 반환 type을 String으로 하여 return "localhost:8080/board" 로 해야 됬었다.
