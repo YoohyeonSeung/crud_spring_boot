@@ -15,6 +15,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  		select * from board_pro
  	</select>
  	
+	<select id = "listSearching" parameterType = "java.util.List" resultType = "com.board.domain.BoardVO">
+ 		select * from board_pro where userid in 
+ 		<foreach collection="writers" index="index" item="writer" open = "(" close=")">
+ 			#{writer}
+ 		</foreach>
+ 	</select> 		
+ 	
+ 	
     <select id="boardView" parameterType="int" resultType="com.board.domain.BoardVO">
         select * from board_pro where bno = #{bno}
     </select>

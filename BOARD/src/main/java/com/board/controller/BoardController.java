@@ -40,6 +40,16 @@ public class BoardController {
         return new ModelAndView("boardList","list",list);
     }
     
+    @RequestMapping(value = "/searching", method = RequestMethod.GET)
+    public ModelAndView listSearching(@PathVariable("writers") List<String> writers) throws Exception{
+    	
+    	List<BoardVO> list = boardMapper.listSearching(writers);
+    	
+    	return new ModelAndView("listSearching", "list", list);
+    }  
+    
+    
+    
     //게시글 작성 페이지(GET)    
     @RequestMapping(value="/post",method=RequestMethod.GET)
     public ModelAndView writeForm() throws Exception{

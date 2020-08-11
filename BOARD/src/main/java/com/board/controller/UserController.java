@@ -20,9 +20,10 @@ import com.board.mapper.UserMapper;
 import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 
-//@RequiredArgsConstructor
+@Api(tags = {"1. User"})
+@RequiredArgsConstructor
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/v1")
 public class UserController {
 
 	@Autowired
@@ -64,28 +65,4 @@ public class UserController {
 		
 		return new RedirectView("/");
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

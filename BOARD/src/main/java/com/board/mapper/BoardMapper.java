@@ -11,8 +11,11 @@ public interface BoardMapper {
 	public void boardInsert(BoardVO board) throws Exception;	
 	
 	// 글 목록
-	public List<BoardVO>boardList()throws Exception;
+	public List<BoardVO> boardList() throws Exception;
 
+	// 특정 사용자 글 목록
+	public List<BoardVO> listSearching(List<String> writers) throws Exception;
+		
 	// 글 보기
 	public BoardVO boardView(int bno) throws Exception;
 	
@@ -23,6 +26,5 @@ public interface BoardMapper {
 	public void boardUpdate(BoardVO boardVO) throws Exception;
 	
 	// 글 삭제
-	public void boardDelete(int bno) throws Exception;
-	
+	public void boardDelete(int bno) throws Exception;	
 }
