@@ -23,6 +23,7 @@ CRUD Project 개요
 ## 4. Reference
 * 게시판 CRUD 기능 참조 : <https://private.tistory.com/35> 
 * 회원 기능 참조 : <https://daddyprogrammer.org/post/series/springboot2-make-rest-api/>
+* 로그인 기능 참조 : <https://tbbrother.tistory.com/65>
 
 ## P.S
 * Spring Boot를 이용하여 게시판 CRUD 를 구현할 때 H2를 이용하거나 MySql을 많이 이용하나 이 프로젝트에서는 Oracle DB를 이용하였다.
